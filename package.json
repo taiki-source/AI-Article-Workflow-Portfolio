@@ -1,0 +1,19 @@
+﻿{
+    "name":  "ai-article-approval-workflow",
+    "version":  "1.0.0",
+    "private":  true,
+    "type":  "module",
+    "description":  "AI article generation and human approval workflow",
+    "scripts":  {
+                    "status":  "node src/portfolio-run.js",
+                    "generate:dry":  "node src/portfolio-generate.js",
+                    "revise:dry":  "node src/portfolio-revise.js",
+                    "save:dry":  "node src/portfolio-save-execute.js",
+                    "test:ai":  "node --check src/portfolio-ai.js"
+                },
+    "dependencies":  {
+                         "dotenv":  "16.6.1",
+                         "googleapis":  "182.0.0",
+                         "openai":  "6.49.0"
+                     }
+}
