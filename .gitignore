@@ -1,9 +1,7 @@
-﻿.env
+node_modules/
+.env
 .env.*
 !.env.example
-node_modules/
-credentials.json
-*-credentials.json
-*.backup
-*.bak
-README.md.backup
+credentials*.json
+*credentials*.json
+service-account*.json
