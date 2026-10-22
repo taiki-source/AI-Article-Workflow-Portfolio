@@ -42,6 +42,20 @@ GOOGLE_SPREADSHEET_ID=
 GOOGLE_CREDENTIALS_PATH=
 ```
 
+### 認証JSONの保管
+
+Googleサービスアカウントの認証JSONは、リポジトリ内の
+`credentials/service-account.json` にだけ保存してください。
+`credentials/` 配下はGitで除外されるため、認証JSONをコミットしたり共有したりしません。
+
+`.env` の `GOOGLE_CREDENTIALS_PATH` には、次のようにこのローカルパスを設定します。
+
+```text
+GOOGLE_CREDENTIALS_PATH=credentials/service-account.json
+```
+
+プログラムはこの環境変数で指定されたパスを使用するため、既存の認証ファイル参照方法は変わりません。
+
 ## 実行
 
 ```powershell
