@@ -1,19 +1,21 @@
-﻿{
-    "name":  "ai-article-approval-workflow",
-    "version":  "1.0.0",
-    "private":  true,
-    "type":  "module",
-    "description":  "AI article generation and human approval workflow",
-    "scripts":  {
-                    "status":  "node src/portfolio-run.js",
-                    "generate:dry":  "node src/portfolio-generate.js",
-                    "revise:dry":  "node src/portfolio-revise.js",
-                    "save:dry":  "node src/portfolio-save-execute.js",
-                    "test:ai":  "node --check src/portfolio-ai.js"
-                },
-    "dependencies":  {
-                         "dotenv":  "16.6.1",
-                         "googleapis":  "182.0.0",
-                         "openai":  "6.49.0"
-                     }
+{
+  "name": "ai-article-approval-workflow",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "AI article generation and human approval workflow",
+  "scripts": {
+    "status": "node src/portfolio-run.js",
+    "dry-run": "node src/portfolio-readonly-dry-run.js",
+    "generate:dry": "node src/portfolio-generate.js",
+    "revise:dry": "node src/portfolio-revise.js",
+    "save:dry": "node src/portfolio-save-execute.js",
+    "test": "node src/portfolio-workflow.js",
+    "check": "node --check src/portfolio-ai.js && node --check src/portfolio-row-workflow.js && node --check src/portfolio-readonly-dry-run.js && node --check src/portfolio-generate.js && node --check src/portfolio-revise.js && node --check src/portfolio-save-execute.js"
+  },
+  "dependencies": {
+    "dotenv": "16.6.1",
+    "googleapis": "182.0.0",
+    "openai": "6.49.0"
+  }
 }
